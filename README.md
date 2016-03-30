@@ -21,3 +21,8 @@ App Specifications
 Added feature(s)
 - Native phone hardware (Camera, GPS, etc)
 - Complex app - 3 or more significant tables
+
+Hand In
+- Folder with APK
+- Folder with Documentation
+- Folder with App files
