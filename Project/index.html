@@ -1,0 +1,166 @@
+<!--
+  FileName: index.html
+  Purpose: Final Project for PROG3180 by Nadia Siraj & Steven Bulgin
+  Revision History
+   		Steven Bulgin, 2016.04.02: Created
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, 
+				initial-scale=1">
+	<title>Final Project PROG3180</title>
+	<link rel="stylesheet" type="text/css" 
+				href="css/lib/jquery.mobile-1.4.5.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- JS script links -->
+	<script src="js/lib/jquery-2.1.4.js"></script>
+	<script src="js/lib/jquery.mobile-1.4.5.js"></script>
+	<script src="js/lib/jquery.validate.js"></script>
+
+	<!-- Project JS scripts -->
+	<script src="js/DAL.js"></script>
+	<script src="js/database.js"></script>
+	<script src="js/facade.js"></script>
+	<script src="js/util.js"></script>
+	<script src="js/global.js"></script>
+</head>
+<body>
+
+	<!------ Home Page ------>
+	<div data-role="page" id="pageHome">
+		<header data-role="header" data-theme="b" data-position="fixed">
+			<h1>Final Project PROG3180</h1>
+		</header>
+		<section class="main" data-role="content">
+			<h1>About page!</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius
+				lectus eget elementum interdum. Sed vulputate erat pulvinar diam 
+				vulputate, ac vulputate tortor convallis. Nam ac maximus diam. Vivamus
+				tincidunt leo sed risus porttitor vestibulum. Suspendisse ut nisl 
+				efficitur dui luctus dapibus vitae et erat. Nam tempor fringilla urna, 
+				vitae faucibus mauris. Fusce non risus vitae elit gravida porttitor. 
+				Vestibulum non libero commodo diam varius malesuada. Cras et congue 
+				dolor. Proin auctor dui vitae enim malesuada, at congue sapien facilisis.
+			</p>			
+		</section>
+		<footer data-role="footer" data-theme="b" data-position="fixed">			
+      <div data-role="navbar" data-iconpos="top">
+          <ul>
+              <li><a href="#pageHome" data-icon="home" data-theme="a" class="ui-btn-active ui-state-persist"
+                     data-transition="" data-rel="">Home</a></li>
+              <li><a href="#pageContacts" data-icon="bars" data-theme="a" class=""
+                     data-transition="" data-rel="">Contacts</a></li>
+              <li><a href="#pageAdd" data-icon="plus" data-theme="a"
+                     class=""
+                     data-transition="" data-rel="">Add</a></li>
+              <li><a href="#pageSettings" data-icon="gear" data-theme="a"
+                     class=""
+                     data-transition="" data-rel="">Settings</a></li>
+          </ul>
+      </div>
+		</footer>
+	</div>
+	<!------ Contacts Page ------>
+	<div data-role="page" id="pageContacts">
+		<header data-role="header" data-theme="b" data-position="fixed">
+			<h1>Final Project PROG3180</h1>
+		</header>
+		<section class="main" data-role="content">
+			<h1>Contacts page!</h1>		
+		</section>
+		<footer data-role="footer" data-theme="b" data-position="fixed">			
+      <div data-role="navbar" data-iconpos="top">
+          <ul>
+              <li><a href="#pageHome" data-icon="home" data-theme="a" class=""
+                     data-transition="" data-rel="">Home</a></li>
+              <li><a href="#pageContacts" data-icon="bars" data-theme="a" class="ui-btn-active ui-state-persist" data-transition="" data-rel="">Contacts</a></li>
+              <li><a href="#pageAdd" data-icon="plus" data-theme="a"
+                     class=""
+                     data-transition="" data-rel="">Add</a></li>
+              <li><a href="#pageSettings" data-icon="gear" data-theme="a"
+                     class=""
+                     data-transition="" data-rel="">Settings</a></li>
+          </ul>
+      </div>
+		</footer>
+	</div>
+	<!------ Details Page ------>
+	<div data-role="page" id="pageDetails">
+		<header data-role="header" data-theme="b" data-position="fixed">
+			<h1>Final Project PROG3180</h1>
+		</header>
+		<section class="main" data-role="content">
+			<h1>Details page!</h1>		
+		</section>
+		<footer data-role="footer" data-theme="b" data-position="fixed">			
+      <div data-role="navbar" data-iconpos="top">
+          <ul>
+              <li><a href="#pageHome" data-icon="home" data-theme="a" class=""
+                     data-transition="" data-rel="">Home</a></li>
+              <li><a href="#pageContacts" data-icon="bars" data-theme="a" class="ui-btn-active ui-state-persist" data-transition="" data-rel="">Contacts</a></li>
+              <li><a href="#pageAdd" data-icon="plus" data-theme="a"
+                     class=""
+                     data-transition="" data-rel="">Add</a></li>
+              <li><a href="#pageSettings" data-icon="gear" data-theme="a"
+                     class=""
+                     data-transition="" data-rel="">Settings</a></li>
+          </ul>
+      </div>
+		</footer>
+	</div>
+	<!------ Add Page ------>
+	<div data-role="page" id="pageAdd">
+		<header data-role="header" data-theme="b" data-position="fixed">
+			<h1>Final Project PROG3180</h1>
+		</header>
+		<section class="main" data-role="content">
+			<h1>Add page!</h1>		
+		</section>
+		<footer data-role="footer" data-theme="b" data-position="fixed">			
+      <div data-role="navbar" data-iconpos="top">
+          <ul>
+              <li><a href="#pageHome" data-icon="home" data-theme="a" class=""
+                     data-transition="" data-rel="">Home</a></li>
+              <li><a href="#pageContacts" data-icon="bars" data-theme="a" class="" data-transition="" data-rel="">Contacts</a></li>
+              <li><a href="#pageAdd" data-icon="plus" data-theme="a"
+                     class="ui-btn-active ui-state-persist"
+                     data-transition="" data-rel="">Add</a></li>
+              <li><a href="#pageSettings" data-icon="gear" data-theme="a"
+                     class=""
+                     data-transition="" data-rel="">Settings</a></li>
+          </ul>
+      </div>
+		</footer>
+	</div>
+	<!------ Settings Page ------>
+	<div data-role="page" id="pageSettings">
+		<header data-role="header" data-theme="b" data-position="fixed">
+			<h1>Final Project PROG3180</h1>
+		</header>
+		<section class="main" data-role="content">
+			<h1>Settings page!</h1>		
+		</section>
+		<footer data-role="footer" data-theme="b" data-position="fixed">			
+      <div data-role="navbar" data-iconpos="top">
+          <ul>
+              <li><a href="#pageHome" data-icon="home" data-theme="a" class=""
+                     data-transition="" data-rel="">Home</a></li>
+              <li><a href="#pageContacts" data-icon="bars" data-theme="a" class="" data-transition="" data-rel="">Contacts</a></li>
+              <li><a href="#pageAdd" data-icon="plus" data-theme="a"
+                     class=""
+                     data-transition="" data-rel="">Add</a></li>
+              <li><a href="#pageSettings" data-icon="gear" data-theme="a"
+                     class="ui-btn-active ui-state-persist"
+                     data-transition="" data-rel="">Settings</a></li>
+          </ul>
+      </div>
+		</footer>
+	</div>
+
+</body>
+</html>

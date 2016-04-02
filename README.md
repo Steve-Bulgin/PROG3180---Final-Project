@@ -26,3 +26,8 @@ Hand In
 - Folder with APK
 - Folder with Documentation
 - Folder with App files
+  - ~~Project started~~
+  - ~~JS files created~~
+  - ~~CSS created~~
+  - ~~Working HTML shell~~
+  - Add buttons/forms to HTML
