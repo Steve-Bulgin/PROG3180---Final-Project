@@ -3,8 +3,8 @@
 ## Checklist
 
 Documentation
-- Team Charter
-- Wireframes
+- ~~Team Charter~~
+- ~~Wireframes~~
 - Events Table
 - Usecase Diagram
 - Usecase Discription
