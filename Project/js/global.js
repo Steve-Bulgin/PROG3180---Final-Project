@@ -5,8 +5,7 @@
  */
 
 function pageContacts_show () {
-	console.info("pCs");
-	linkMaker(); 
+	//linkMaker(); 
 	contactListMaker();
 }
 

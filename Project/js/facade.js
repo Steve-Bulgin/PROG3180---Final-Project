@@ -19,19 +19,24 @@ function linkMaker () {
 //Constructs dynamic listviews. Adds to contactList div
 function contactListMaker () {
 	var code = "";
-	for (var i = 65; i <= 90; i++) {
-       code += " <ul  id=\"\""  + String.fromCharCode(i) + 
-                "list\" data-role=\"listview\" class=\"lstRefresh ui-listview-inset\">" +
-                "<h1 id=\"" + String.fromCharCode(i) + "\">" + 
-                String.fromCharCode(i) + "</h1> ";
+	for (var i = 64; i <= 90; i++) {
+		if (i == 64) {
+			code += "<li data-role=\"list-divider\">#</li>";
 
-        for (var j = 0; j < 3; j++) {
-        	code += "<li><a href=\"#pageDetails\"><h1>Some, Name</h1></a></li>";
-        }
-        code += "</ul>";
+	        for (var j = 0; j < 3; j++) {
+	        	code += "<li><a href=\"#pageDetails\"><h1>Some, Name</h1></a></li>";
+	        }
+		} 
+		else {
+			code += "<li data-role=\"list-divider\">" + String.fromCharCode(i) + "</li>";
+
+	        for (var j = 0; j < 3; j++) {
+	        	code += "<li><a href=\"#pageDetails\"><h1>" + String.fromCharCode(i) + "Some, Name</h1></a></li>";
+	        }
+		}       
     }
 
-	$("#contactList ").html(code);
-	$(".lstRefresh").listview().listview("refresh");
+	$("#listul").html(code);
+	$("#listul").listview().listview("refresh");
      
 }

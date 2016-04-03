@@ -1,4 +1,6 @@
 # PROG3180---Final-Project
+## Non Critical Problems 
+- Styling on search bar could use som work
 
 ## Checklist
 
@@ -34,3 +36,4 @@ Hand In
   - ~~Image picker/display~~
   - Sort array off db alphabetically
   - Add buttons/forms to HTML
+  - ~~Search function for contacts~~
