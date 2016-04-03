@@ -31,5 +31,6 @@ Hand In
   - ~~CSS created~~
   - ~~Working HTML shell~~
   - ~~Listviews working with dummy data~~
+  - ~~Image picker/display~~
   - Sort array off db alphabetically
   - Add buttons/forms to HTML

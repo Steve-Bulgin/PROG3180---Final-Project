@@ -50,18 +50,19 @@
 		</section>
 		<footer data-role="footer" data-theme="b" data-position="fixed">			
       <div data-role="navbar" data-iconpos="top">
-          <ul>
-              <li><a href="#pageHome" data-icon="home" data-theme="a" class="ui-btn-active ui-state-persist"
-                     data-transition="" data-rel="">Home</a></li>
-              <li><a href="#pageContacts" data-icon="bars" data-theme="a" class=""
-                     data-transition="" data-rel="">Contacts</a></li>
-              <li><a href="#pageAdd" data-icon="plus" data-theme="a"
-                     class=""
-                     data-transition="" data-rel="">Add</a></li>
-              <li><a href="#pageSettings" data-icon="gear" data-theme="a"
-                     class=""
-                     data-transition="" data-rel="">Settings</a></li>
-          </ul>
+        <ul>
+          <li><a href="#pageHome" data-icon="home" data-theme="a" 
+          			 class="ui-btn-active ui-state-persist"
+                 data-transition="" data-rel="">Home</a></li>
+          <li><a href="#pageContacts" data-icon="bars" data-theme="a" class=""
+                 data-transition="" data-rel="">Contacts</a></li>
+          <li><a href="#pageAdd" data-icon="plus" data-theme="a"
+                 class=""
+                 data-transition="" data-rel="">Add</a></li>
+          <li><a href="#pageSettings" data-icon="gear" data-theme="a"
+                 class=""
+                 data-transition="" data-rel="">Settings</a></li>
+        </ul>
       </div>
 		</footer>
 	</div>
@@ -78,17 +79,19 @@
 		</section>
 		<footer data-role="footer" data-theme="b" data-position="fixed">			
       <div data-role="navbar" data-iconpos="top">
-          <ul>
-              <li><a href="#pageHome" data-icon="home" data-theme="a" class=""
-                     data-transition="" data-rel="">Home</a></li>
-              <li><a href="#pageContacts" data-icon="bars" data-theme="a" class="ui-btn-active ui-state-persist" data-transition="" data-rel="">Contacts</a></li>
-              <li><a href="#pageAdd" data-icon="plus" data-theme="a"
-                     class=""
-                     data-transition="" data-rel="">Add</a></li>
-              <li><a href="#pageSettings" data-icon="gear" data-theme="a"
-                     class=""
-                     data-transition="" data-rel="">Settings</a></li>
-          </ul>
+        <ul>
+          <li><a href="#pageHome" data-icon="home" data-theme="a" class=""
+                 data-transition="" data-rel="">Home</a></li>
+          <li><a href="#pageContacts" data-icon="bars" data-theme="a" 
+          			 class="ui-btn-active ui-state-persist" data-transition="" 
+          			 data-rel="">Contacts</a></li>
+          <li><a href="#pageAdd" data-icon="plus" data-theme="a"
+                 class=""
+                 data-transition="" data-rel="">Add</a></li>
+          <li><a href="#pageSettings" data-icon="gear" data-theme="a"
+                 class=""
+                 data-transition="" data-rel="">Settings</a></li>
+        </ul>
       </div>
 		</footer>
 	</div>
@@ -102,17 +105,19 @@
 		</section>
 		<footer data-role="footer" data-theme="b" data-position="fixed">			
       <div data-role="navbar" data-iconpos="top">
-          <ul>
-              <li><a href="#pageHome" data-icon="home" data-theme="a" class=""
-                     data-transition="" data-rel="">Home</a></li>
-              <li><a href="#pageContacts" data-icon="bars" data-theme="a" class="ui-btn-active ui-state-persist" data-transition="" data-rel="">Contacts</a></li>
-              <li><a href="#pageAdd" data-icon="plus" data-theme="a"
-                     class=""
-                     data-transition="" data-rel="">Add</a></li>
-              <li><a href="#pageSettings" data-icon="gear" data-theme="a"
-                     class=""
-                     data-transition="" data-rel="">Settings</a></li>
-          </ul>
+        <ul>
+          <li><a href="#pageHome" data-icon="home" data-theme="a" class=""
+                 data-transition="" data-rel="">Home</a></li>
+          <li><a href="#pageContacts" data-icon="bars" data-theme="a" 
+          		   class="ui-btn-active ui-state-persist" data-transition="" 
+          		   data-rel="">Contacts</a></li>
+          <li><a href="#pageAdd" data-icon="plus" data-theme="a"
+                 class=""
+                 data-transition="" data-rel="">Add</a></li>
+          <li><a href="#pageSettings" data-icon="gear" data-theme="a"
+                 class=""
+                 data-transition="" data-rel="">Settings</a></li>
+        </ul>
       </div>
 		</footer>
 	</div>
@@ -122,21 +127,44 @@
 			<h1>Final Project PROG3180</h1>
 		</header>
 		<section class="main" data-role="content">
-			<h1>Add page!</h1>		
+			<h1>Add page!</h1>
+			<p style="text-align:center"><img id="imgDisplay" src="#" alt="contacts image" style="display:none;"></p>
+			<form id="frmAdd">
+				<label for "imgFile">Image:</label>
+				<input type="file" id="imgFile" name="imgFile" 
+								accept=".jpg,.jpeg" onchange="getImg(this);">
+				<label for "txtFirstName">First Name:</label>
+				<input type="text" id="txtFirstName" name="txtFirstName">
+				<label for "txtLastName">Last Name:</label>
+				<input type="text" id="txtLastName" name="txtLastName">
+				<label for "addEmail">Email:</label>
+				<input type="email" id="addEmail" name="addEmail">
+				<label for "txtPhone">Phone:</label>
+				<input type="text" id="txtPhone" name="txtPhone">
+				<label for="relationshipType">Relationship:</label>
+				<select id="relationshipType" name="relationshipType"></select>
+				<label for="notes">Notes:</label>
+				<textarea id="notes" name="notes"></textarea>
+				<a href="#" id="btnSave" data-role="button" 
+						data-inline="true" class="blue-btn">Save</a>
+				<a href="#" id="btnCancel" data-role="button" 
+						data-inline="true" class="blue-btn">Cancel</a>
+			</form>		
 		</section>
 		<footer data-role="footer" data-theme="b" data-position="fixed">			
       <div data-role="navbar" data-iconpos="top">
-          <ul>
-              <li><a href="#pageHome" data-icon="home" data-theme="a" class=""
-                     data-transition="" data-rel="">Home</a></li>
-              <li><a href="#pageContacts" data-icon="bars" data-theme="a" class="" data-transition="" data-rel="">Contacts</a></li>
-              <li><a href="#pageAdd" data-icon="plus" data-theme="a"
-                     class="ui-btn-active ui-state-persist"
-                     data-transition="" data-rel="">Add</a></li>
-              <li><a href="#pageSettings" data-icon="gear" data-theme="a"
-                     class=""
-                     data-transition="" data-rel="">Settings</a></li>
-          </ul>
+        <ul>
+          <li><a href="#pageHome" data-icon="home" data-theme="a" class=""
+                 data-transition="" data-rel="">Home</a></li>
+          <li><a href="#pageContacts" data-icon="bars" data-theme="a" class="" 
+          			 data-transition="" data-rel="">Contacts</a></li>
+          <li><a href="#pageAdd" data-icon="plus" data-theme="a"
+                 class="ui-btn-active ui-state-persist"
+                 data-transition="" data-rel="">Add</a></li>
+          <li><a href="#pageSettings" data-icon="gear" data-theme="a"
+                 class=""
+                 data-transition="" data-rel="">Settings</a></li>
+        </ul>
       </div>
 		</footer>
 	</div>
@@ -150,17 +178,18 @@
 		</section>
 		<footer data-role="footer" data-theme="b" data-position="fixed">			
       <div data-role="navbar" data-iconpos="top">
-          <ul>
-              <li><a href="#pageHome" data-icon="home" data-theme="a" class=""
-                     data-transition="" data-rel="">Home</a></li>
-              <li><a href="#pageContacts" data-icon="bars" data-theme="a" class="" data-transition="" data-rel="">Contacts</a></li>
-              <li><a href="#pageAdd" data-icon="plus" data-theme="a"
-                     class=""
-                     data-transition="" data-rel="">Add</a></li>
-              <li><a href="#pageSettings" data-icon="gear" data-theme="a"
-                     class="ui-btn-active ui-state-persist"
-                     data-transition="" data-rel="">Settings</a></li>
-          </ul>
+        <ul>
+          <li><a href="#pageHome" data-icon="home" data-theme="a" class=""
+                 data-transition="" data-rel="">Home</a></li>
+          <li><a href="#pageContacts" data-icon="bars" data-theme="a" class="" 
+          			 data-transition="" data-rel="">Contacts</a></li>
+          <li><a href="#pageAdd" data-icon="plus" data-theme="a"
+                 class=""
+                 data-transition="" data-rel="">Add</a></li>
+          <li><a href="#pageSettings" data-icon="gear" data-theme="a"
+                 class="ui-btn-active ui-state-persist"
+                 data-transition="" data-rel="">Settings</a></li>
+        </ul>
       </div>
 		</footer>
 	</div>
