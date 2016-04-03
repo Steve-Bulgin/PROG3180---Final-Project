@@ -30,4 +30,6 @@ Hand In
   - ~~JS files created~~
   - ~~CSS created~~
   - ~~Working HTML shell~~
+  - ~~Listviews working with dummy data~~
+  - Sort array off db alphabetically
   - Add buttons/forms to HTML
