@@ -27,7 +27,7 @@ Added feature(s)
 Hand In
 - Folder with APK
 - Folder with Documentation
-  - Start google docs help file~~
+  - ~~Start google docs help file~~
 - Folder with App files
   - ~~Project started~~
   - ~~JS files created~~
@@ -36,7 +36,8 @@ Hand In
   - ~~Listviews working with dummy data~~
   - ~~Image picker/display~~
   - Sort array off db alphabetically
-  - Add buttons/forms to HTML
+  - ~~Add buttons/forms to HTML~~
   - ~~Search function for contacts~~
   - ~~Edit/Details page~~
   - Add place holder image for add and edit pages
+  - Setup db and local storage
