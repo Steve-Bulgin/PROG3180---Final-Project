@@ -105,7 +105,32 @@
 			<h1>Final Project PROG3180</h1>
 		</header>
 		<section class="main" data-role="content">
-			<h1>Details page!</h1>		
+			<h1>Details page!</h1>
+			<p style="text-align:center"><img id="imgDisplayEdit" src="#" 
+					alt="contacts image" style="display:none;"></p>
+			<form id="frmEdit">
+				<label for "imgFileEdit">Image:</label>
+				<input type="file" id="imgFileEdit" name="imgFileEdit" 
+								accept=".jpg,.jpeg" onchange="getImg(this, '#imgDisplayEdit');">
+				<label for "txtFirstNameEdit">First Name:</label>
+				<input type="text" id="txtFirstNameEdit" name="txtFirstNameEdit">
+				<label for "txtLastNameEdit">Last Name:</label>
+				<input type="text" id="txtLastNameEdit" name="txtLastNameEdit">
+				<label for "editEmail">Email:</label>
+				<input type="email" id="editEmail" name="editEmail">
+				<label for "txtPhoneEdit">Phone:</label>
+				<input type="text" id="txtPhoneEdit" name="txtPhoneEdit">
+				<label for="relationshipTypeEdit">Relationship:</label>
+				<select id="relationshipTypeEdit" name="relationshipTypeEdit"></select>
+				<label for="notesEdit">Notes:</label>
+				<textarea id="notesEdit" name="notesEdit"></textarea>
+				<a href="#" id="btnUpdate" data-role="button" 
+						data-inline="true" class="blue-btn">Update</a>
+				<a href="#" id="btnCancel" data-role="button" 
+						data-inline="true" class="blue-btn">Cancel</a>
+				<a href="#" id="btnDelete" data-role="button" 
+						data-inline="true" class="blue-btn">Delete</a>
+			</form>				
 		</section>
 		<footer data-role="footer" data-theme="b" data-position="fixed">			
       <div data-role="navbar" data-iconpos="top">
@@ -132,11 +157,12 @@
 		</header>
 		<section class="main" data-role="content">
 			<h1>Add page!</h1>
-			<p style="text-align:center"><img id="imgDisplay" src="#" alt="contacts image" style="display:none;"></p>
+			<p style="text-align:center"><img id="imgDisplay" src="#" 
+					alt="contacts image" style="display:none;"></p>
 			<form id="frmAdd">
 				<label for "imgFile">Image:</label>
 				<input type="file" id="imgFile" name="imgFile" 
-								accept=".jpg,.jpeg" onchange="getImg(this);">
+								accept=".jpg,.jpeg" onchange="getImg(this, '#imgDisplay');">
 				<label for "txtFirstName">First Name:</label>
 				<input type="text" id="txtFirstName" name="txtFirstName">
 				<label for "txtLastName">Last Name:</label>

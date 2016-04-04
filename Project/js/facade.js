@@ -6,15 +6,6 @@
  *						for now
  */
 
-//Function makes bookmark links for contacts
-function linkMaker () {
-	var code = "<a href=\"#num\" data-ajax=\"false\">#</a>";
-    for (var i = 65; i <= 90; i++) {
-        code += "<a href=\"#" + String.fromCharCode(i) + "\" data-ajax=\"false\">" + 
-         String.fromCharCode(i) + "</a>";
-    }
-    $("#bookmarklinks").html(code);
-}
 
 //Constructs dynamic listviews. Adds to contactList div
 function contactListMaker () {
