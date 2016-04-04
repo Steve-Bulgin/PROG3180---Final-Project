@@ -40,4 +40,5 @@ Hand In
   - ~~Search function for contacts~~
   - ~~Edit/Details page~~
   - Add place holder image for add and edit pages
+  - ~~Theme Swap works~~
   - Setup db and local storage

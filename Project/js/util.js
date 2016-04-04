@@ -2,6 +2,7 @@
  * Purpose: Holds odd js that doesn't really fit anywhere else
  * Revision History
  * 		Steven Bulgin, 2016.04.02: Created
+ *      Steven Bulgin, 2016.04.04: Added theme switcher
  */
 
 //Grabs image from file picker
@@ -18,17 +19,18 @@ function getImg (input, elm_id) {
     } 
 }
 
+//Tests value of radio buttons and switches out css
 function themeSwitcher (theme) {
-	 if (theme == "default") {
-	 	$("#cssstyle").attr('href','css/themes/default.min.css');
-	 }
-	 else if (theme == "red") {
-	  	$("#cssstyle").attr('href','css/themes/red.min.css');
-	 }
-	 else if (theme == "green") {
-	  	$("#cssstyle").attr('href','css/themes/green.min.css');
-	 }
-	 else if (theme == "purple") {
-	  	$("#cssstyle").attr('href','css/themes/purple.min.css');
-	 }   
+	if (theme == "default") {
+	 $("#cssstyle").attr('href','css/themes/default.min.css');
+	}
+	else if (theme == "red") {
+	  $("#cssstyle").attr('href','css/themes/red.min.css');
+	}
+	else if (theme == "green") {
+	  $("#cssstyle").attr('href','css/themes/green.min.css');
+	}
+	else if (theme == "purple") {
+	  $("#cssstyle").attr('href','css/themes/purple.min.css');
+	}   
 }
