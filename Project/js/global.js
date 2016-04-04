@@ -4,13 +4,24 @@
  * 		Steven Bulgin, 2016.04.02: Created
  */
 
-function pageContacts_show () {
-	//linkMaker(); 
+//Function calls 'contactListMaker' 
+//on contact page show
+function pageContacts_show () { 
 	contactListMaker();
 }
 
+function btnSetTheme_click () {
+	var theme = "";
+	theme = $("input[name=themeChoice]:checked").val();
+	localStorage.setItem("theme", theme);
+	alert(localStorage.getItem("theme") + " set");
+	themeSwitcher(theme);
+}
+
 function init () {
+	themeSwitcher(localStorage.getItem("theme"));
 	$("#pageContacts").on("pageshow", pageContacts_show); 
+	$("#btnSetTheme").on("click", btnSetTheme_click);
 }
 
 //Ready

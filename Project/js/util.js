@@ -17,3 +17,18 @@ function getImg (input, elm_id) {
         reader.readAsDataURL(input.files[0]);
     } 
 }
+
+function themeSwitcher (theme) {
+	 if (theme == "default") {
+	 	$("#cssstyle").attr('href','css/themes/default.min.css');
+	 }
+	 else if (theme == "red") {
+	  	$("#cssstyle").attr('href','css/themes/red.min.css');
+	 }
+	 else if (theme == "green") {
+	  	$("#cssstyle").attr('href','css/themes/green.min.css');
+	 }
+	 else if (theme == "purple") {
+	  	$("#cssstyle").attr('href','css/themes/purple.min.css');
+	 }   
+}

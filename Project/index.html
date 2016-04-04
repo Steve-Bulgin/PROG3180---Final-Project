@@ -16,12 +16,13 @@
 				href="css/lib/jquery.mobile-1.4.5.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
+	<!-- Theme Sheet links -->
+	<link id="cssstyle" rel="stylesheet" href="css/themes/default.min.css">
+
 	<!-- JS script links -->
 	<script src="js/lib/jquery-2.1.4.js"></script>
 	<script src="js/lib/jquery.mobile-1.4.5.js"></script>
 	<script src="js/lib/jquery.validate.js"></script>
-
-	<!-- Project JS scripts -->
 	<script src="js/DAL.js"></script>
 	<script src="js/database.js"></script>
 	<script src="js/facade.js"></script>
@@ -32,7 +33,7 @@
 
 	<!------ Home Page ------>
 	<div data-role="page" id="pageHome">
-		<header data-role="header" data-theme="b" data-position="fixed">
+		<header class="header-style" data-role="header" data-position="fixed">
 			<h1>Final Project PROG3180</h1>
 		</header>
 		<section class="main" data-role="content">
@@ -50,7 +51,7 @@
 		</section>
 		<footer data-role="footer" data-theme="b" data-position="fixed">			
       <div data-role="navbar" data-iconpos="top">
-        <ul>
+        <ul class="redtheme">
           <li><a href="#pageHome" data-icon="home" data-theme="a" 
           			 class="ui-btn-active ui-state-persist"
                  data-transition="" data-rel="">Home</a></li>
@@ -68,7 +69,7 @@
 	</div>
 	<!------ Contacts Page ------>
 	<div data-role="page" id="pageContacts">
-		<header data-role="header" data-theme="b" data-position="fixed">
+		<header class="header-style" data-role="header" data-position="fixed">
 			<h1>Contacts</h1>
 		</header>
 		<section id="" class="main" data-role="content">
@@ -101,7 +102,7 @@
 	</div>
 	<!------ Details Page ------>
 	<div data-role="page" id="pageDetails">
-		<header data-role="header" data-theme="b" data-position="fixed">
+		<header class="header-style" data-role="header" data-position="fixed">
 			<h1>Final Project PROG3180</h1>
 		</header>
 		<section class="main" data-role="content">
@@ -152,7 +153,7 @@
 	</div>
 	<!------ Add Page ------>
 	<div data-role="page" id="pageAdd">
-		<header data-role="header" data-theme="b" data-position="fixed">
+		<header class="header-style" data-role="header" data-position="fixed">
 			<h1>Final Project PROG3180</h1>
 		</header>
 		<section class="main" data-role="content">
@@ -200,8 +201,8 @@
 	</div>
 	<!------ Settings Page ------>
 	<div data-role="page" id="pageSettings">
-		<header data-role="header" data-theme="b" data-position="fixed">
-			<h1>Final Project PROG3180</h1>
+		<header class="header-style" data-role="header" data-position="fixed">
+			<h1>Settings</h1>
 		</header>
 		<section class="main" data-role="content">
 			<h1>Settings page!</h1>		
@@ -211,16 +212,16 @@
 			<fieldset>
 				<h2 align="center">Choose A Theme</h2>
 				<input type="radio" id="radThemeDefault" name="themeChoice" 
-								value="" placeholder="" checked="checked">
+								value="default" placeholder="" checked="checked">
 				<label for="radThemeDefault">Default</label>
 				<input type="radio" id="radThemeRed" name="themeChoice" 
-								value="" placeholder="">
+								value="red" placeholder="">
 				<label for="radThemeRed">Red</label>
 				<input type="radio" id="radThemeGreen" name="themeChoice" 
-								value="" placeholder="">
+								value="green" placeholder="">
 				<label for="radThemeGreen">Green</label>
 				<input type="radio" id="radThemePurple" name="themeChoice" 
-								value="" placeholder="">
+								value="purple" placeholder="">
 				<label for="radThemePurple">Purple</label>
 			</fieldset>
 			<a id="btnSetTheme" href="###" data-role="button"
