@@ -42,3 +42,6 @@ Hand In
   - Add place holder image for add and edit pages
   - ~~Theme Swap works~~
   - Setup db and local storage
+  - ~~database done~~
+  - ~~DAL done~~
+  - Facade

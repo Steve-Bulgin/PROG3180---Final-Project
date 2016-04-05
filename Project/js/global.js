@@ -24,13 +24,34 @@ function btnSetTheme_click () {
 	themeSwitcher(theme);
 }
 
+function btnDatabaseClear_click () {
+	DB.dropTables(); 
+}
+
 function init () {
 	themeSwitcher(localStorage.getItem("theme"));
 	$("#pageContacts").on("pageshow", pageContacts_show); 
 	$("#btnSetTheme").on("click", btnSetTheme_click);
+	$("#btnDatabaseClear").on("click", btnDatabaseClear_click);
+}
+
+function initDB () {
+	console.info("Creating DB... ");
+	try {
+	    DB.createDatabase();
+	    if (db) {
+	    	console.info("Making the tables... ");
+	    	dropRelationType();
+	    	DB.createTables();
+	    }
+	} catch(e) {
+	    console.error("Error: (Fatal) Error in initDB. Can not proceed");
+	}
+	insertRelationTypes(); 
 }
 
 //Ready
 $(document).ready(function() {
 	init();
+	initDB();
 });

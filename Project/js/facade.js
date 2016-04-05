@@ -31,3 +31,13 @@ function contactListMaker () {
 	$("#listul").listview().listview("refresh");
      
 }
+
+function dropRelationType () {
+	RelationType.drop(); 
+}
+
+
+
+function insertRelationTypes () {
+	RelationType.insert();
+}
