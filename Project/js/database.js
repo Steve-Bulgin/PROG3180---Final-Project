@@ -40,7 +40,7 @@ var DB = {
 		 	var options = [];
 		 	console.info("Making tables... ");
 
-		 	var sql = "CREATE TABLE IF NOT EXISTS relationType(" +
+		 	var sql = "CREATE TABLE IF NOT EXISTS relationType( " +
  		  		"id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
  		  		"name VARCHAR(20) NOT NULL); ";
 

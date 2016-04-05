@@ -4,6 +4,8 @@
  * 		Steven Bulgin, 2016.04.02: Created
  *      Steven Bulgin, 2016.04.03: Listviews working, bounces to details
  *						for now
+ *      Steven Bulgin, 2016.04.05: Got relation type inserter working how I
+ *						like
  */
 
 
@@ -32,12 +34,21 @@ function contactListMaker () {
      
 }
 
+//Called to drop RelationType table on load so as not to store
+// duplicate data in db
 function dropRelationType () {
 	RelationType.drop(); 
 }
 
 
-
+//Inserts types in relationType table
+// add or remove from relTypes array to alter select options
 function insertRelationTypes () {
-	RelationType.insert();
+	var relTypes = ["Friend", "Classmate", "Instructor", "BFF",
+				    "Coworker", "Other", "Spouse", "Family"];
+
+	for (var i = 0; i < relTypes.length; i++) {
+		type = [relTypes[i]];
+		RelationType.insert(type);
+	}	
 }

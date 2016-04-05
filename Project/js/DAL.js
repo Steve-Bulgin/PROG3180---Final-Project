@@ -17,48 +17,12 @@ var RelationType = {
 	},
 	insert: function (options) {
 		function txFunction (tx) {
-			var options = [];
 		 	function successInsert () {
 		 	 	console.info("Inserted relation types"); 
 		 	}
 
 		 	var sql = "INSERT INTO relationType(name) " +
-		 			  "VALUES(\"Other\"); "; 
-
-		 	tx.executeSql(sql, options, successInsert, errorHandler);
-
-		 	sql = "INSERT INTO relationType(name) " +
-		 			  "VALUES(\"Classmate\"); "; 
-
-		 	tx.executeSql(sql, options, successInsert, errorHandler);
-
-		 	sql = "INSERT INTO relationType(name) " +
-		 			  "VALUES(\"Instructor\"); "; 
-
-		 	tx.executeSql(sql, options, successInsert, errorHandler);
-
-		 	sql = "INSERT INTO relationType(name) " +
-		 			  "VALUES(\"Coworker\"); "; 
-
-		 	tx.executeSql(sql, options, successInsert, errorHandler);
-
-		 	sql = "INSERT INTO relationType(name) " +
-		 			  "VALUES(\"BFF\"); "; 
-
-		 	tx.executeSql(sql, options, successInsert, errorHandler);
-
-		 	sql = "INSERT INTO relationType(name) " +
-		 			  "VALUES(\"Friend\"); "; 
-
-		 	tx.executeSql(sql, options, successInsert, errorHandler);
-
-		 	sql = "INSERT INTO relationType(name) " +
-		 			  "VALUES(\"Family\"); "; 
-
-		 	tx.executeSql(sql, options, successInsert, errorHandler);
-
-		 	sql = "INSERT INTO relationType(name) " +
-		 			  "VALUES(\"Spouse\"); "; 
+		 			  "VALUES(?); "; 
 
 		 	tx.executeSql(sql, options, successInsert, errorHandler);
 		}

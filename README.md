@@ -13,6 +13,7 @@ Documentation
 - ERD diagram
 - Data Dictionary
 - Help File (How to use App)
+- ~~Reference page~~
 
 App Specifications
 - At least 4 pages directly related to app function
@@ -45,3 +46,4 @@ Hand In
   - ~~database done~~
   - ~~DAL done~~
   - Facade
+  - ~~Relation Types Insert~~
