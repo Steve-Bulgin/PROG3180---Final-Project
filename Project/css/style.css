@@ -6,7 +6,7 @@
 
  #searchbox {
  	position:fixed !Important;
- 	top:8% !Important;   
+ 	top:3em !Important;   
  	z-index: 2 !Important;
  	// width: 100% !Important;
  	/*** digging out jq settings */
