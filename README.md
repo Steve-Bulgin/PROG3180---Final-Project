@@ -47,3 +47,6 @@ Hand In
   - ~~DAL done~~
   - Facade
   - ~~Relation Types Insert~~
+  - ~~All CRUD~~
+  - Settings radio btn glitch
+  - Validation

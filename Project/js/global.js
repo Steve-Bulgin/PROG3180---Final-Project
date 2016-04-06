@@ -11,6 +11,7 @@
 //Function calls 'contactListMaker' 
 //on contact page show
 function pageContacts_show () { 
+	console.info("page show");
 	contactListMaker();
 }
 
@@ -26,6 +27,38 @@ function btnSetTheme_click () {
 
 function btnDatabaseClear_click () {
 	DB.dropTables(); 
+	initDB();
+}
+
+function pageAdd_show () {
+	dropDownSetter("#relationshipType");
+}
+
+function btnSave_click () {
+	addContact();
+}
+
+function pageDetails_show () {
+	dropDownSetter("#relationshipTypeEdit");
+	showDetails();
+}
+
+function btnDelete_click () {
+	deleteContact();
+}
+
+function btnUpdate_click () {
+	updateContact();
+}
+
+function btnCancel_click () {
+	$(location).prop('href', "#pageContacts");  
+}
+
+function pageSettings_show () {
+	var theme = localStorage.getItem('theme');
+	console.info("theme set: " + theme);
+	$('input[name=themeChoice][value=' + theme + ']').prop('checked',true).checkboxradio("refresh");
 }
 
 function init () {
@@ -33,6 +66,13 @@ function init () {
 	$("#pageContacts").on("pageshow", pageContacts_show); 
 	$("#btnSetTheme").on("click", btnSetTheme_click);
 	$("#btnDatabaseClear").on("click", btnDatabaseClear_click);
+	$("#pageAdd").on("pageshow", pageAdd_show);
+	$("#btnSave").on("click", btnSave_click);
+	$("#pageDetails").on("pageshow", pageDetails_show);
+	$("#btnDelete").on("click", btnDelete_click);
+	$("#btnUpdate").on("click", btnUpdate_click);
+	$("#btnCancel").on("click", btnCancel_click);
+	$("#pageSettings").on("pageshow", pageSettings_show);
 }
 
 function initDB () {

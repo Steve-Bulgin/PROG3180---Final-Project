@@ -6,7 +6,7 @@
  */
 
 var RelationType = {
-	selectAllOrderByLastName: function (callback) {
+	selectAll: function (callback) {
 		var options = [];
 		function txFunction (tx) {
 		 	var sql = "SELECT * FROM relationType;";
@@ -78,7 +78,7 @@ var Contacts = {
 	},
 	update: function (options) {
 		function txFunction (tx) {
-		 	var sql = "UPDATE contacts" +
+		 	var sql = "UPDATE contacts " +
 					  "SET firstName=?, lastName=?, eMail=?, " +
 					  "phone=?, relationshipId=?, notes=? " +
 					  "WHERE id=?;";
