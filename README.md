@@ -8,10 +8,10 @@ Documentation
 - ~~Team Charter~~
 - ~~Wireframes~~
 - Events Table
-- Usecase Diagram
+- ~~Usecase Diagram~~
 - Usecase Discription
-- ERD diagram
-- Data Dictionary
+- ~~ERD diagram~~
+- ~~Data Dictionary~~ (No Longer required)
 - Help File (How to use App)
 - ~~Reference page~~
 
@@ -36,17 +36,16 @@ Hand In
   - ~~Working HTML shell~~
   - ~~Listviews working with dummy data~~
   - ~~Image picker/display~~
-  - Sort array off db alphabetically
   - ~~Add buttons/forms to HTML~~
   - ~~Search function for contacts~~
   - ~~Edit/Details page~~
   - Add place holder image for add and edit pages
   - ~~Theme Swap works~~
-  - Setup db and local storage
+  - ~~Setup db and local storage~~
   - ~~database done~~
   - ~~DAL done~~
-  - Facade
+  - ~~Facade~~
   - ~~Relation Types Insert~~
   - ~~All CRUD~~
-  - Settings radio btn glitch
-  - Validation
+  - ~~Settings radio btn glitch~~
+  - ~~Validation~~
