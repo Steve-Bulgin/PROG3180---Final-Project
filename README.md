@@ -9,7 +9,7 @@ Documentation
 - ~~Wireframes~~
 - Events Table
 - ~~Usecase Diagram~~
-- Usecase Discription
+- ~~Usecase Discription~~
 - ~~ERD diagram~~
 - ~~Data Dictionary~~ (No Longer required)
 - Help File (How to use App)
