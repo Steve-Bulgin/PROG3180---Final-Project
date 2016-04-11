@@ -10,8 +10,7 @@ var RelationType = {
 		var options = [];
 		function txFunction (tx) {
 		 	var sql = "SELECT * FROM relationType;";
-
-		 	tx.executeSql(sql, options, callback, errorHandler); 
+		 	tx.executeSql(sql, options, callback, errorHandler);
 		}
 		db.transaction(txFunction, errorHandler, successTransaction); 
 	},

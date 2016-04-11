@@ -32,25 +32,21 @@
 </head>
 <body>
 
-	<!------ Home Page ------>
-	<div data-role="page" id="pageHome">
+<!------Page1: Home Page ------>
+	<div data-role="page" class="backGround" id="pageHome">
 		<header class="header-style" data-role="header" data-position="fixed">
 			<h1>Final Project PROG3180</h1>
 		</header>
 		<section class="main" data-role="content">
-			<h1>About page!</h1>
+			<h1 >About page!</h1>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut varius
 				lectus eget elementum interdum. Sed vulputate erat pulvinar diam 
-				vulputate, ac vulputate tortor convallis. Nam ac maximus diam. Vivamus
-				tincidunt leo sed risus porttitor vestibulum. Suspendisse ut nisl 
-				efficitur dui luctus dapibus vitae et erat. Nam tempor fringilla urna, 
-				vitae faucibus mauris. Fusce non risus vitae elit gravida porttitor. 
-				Vestibulum non libero commodo diam varius malesuada. Cras et congue 
-				dolor. Proin auctor dui vitae enim malesuada, at congue sapien facilisis.
-			</p>			
+				vulputate, ac vulputate tortor convallis.
+			</p>
+
 		</section>
-		<footer data-role="footer" data-theme="b" data-position="fixed">			
+		<footer data-role="footer" data-theme="a" data-position="fixed">
       <div data-role="navbar" data-iconpos="top">
         <ul class="redtheme">
           <li><a href="#pageHome" data-icon="home" data-theme="a" 
@@ -68,17 +64,18 @@
       </div>
 		</footer>
 	</div>
-	<!------ Contacts Page ------>
-	<div data-role="page" id="pageContacts">
+<!------Page2:  Contacts Page ------>
+	<div data-role="page" class="backGround" id="pageContacts">
 		<header class="header-style" data-role="header" data-position="fixed">
 			<h1>Contacts</h1>
 		</header>
-		<section id="" class="main" data-role="content">
+		<section  class="main" data-role="content">
 			<form class="ui-filterable" id="searchbox">
 	  		<input id="filter" data-type="search">
 			</form>
+			<br>
 			<div id="contactList" >
-				<ul id="listul" data-role="listview" class="ui-listview-inset"
+				<ul id="listul" data-inset="true" data-role="listview" class="ui-listview-inset"
 								data-filter="true" data-input="#filter">	
 				</ul>
 			</div>
@@ -101,8 +98,8 @@
       </div>
 		</footer>
 	</div>
-	<!------ Details Page ------>
-	<div data-role="page" id="pageDetails">
+<!------Page3:  Details Page ------>
+	<div data-role="page" class="backGround" id="pageDetails">
 		<header class="header-style" data-role="header" data-position="fixed">
 			<h1>Final Project PROG3180</h1>
 		</header>
@@ -111,24 +108,25 @@
 			<p style="text-align:center"><img id="imgDisplayEdit" src="#" 
 					alt="contacts image" style="display:none;"></p>
 			<form id="frmEdit">
-				<label for "imgFileEdit">Image:</label>
-				<input type="file" id="imgFileEdit" name="imgFileEdit" 
+
+				<label for="imgFileEdit">Image:</label>
+				<input type="file" id="imgFileEdit" name="imgFileEdit"
 								accept=".jpg,.jpeg" onchange="getImg(this, '#imgDisplayEdit');">
-				<label for "txtFirstNameEdit">First Name:</label>
-				<input type="text" id="txtFirstNameEdit" name="txtFirstNameEdit">
-				<label for "txtLastNameEdit">Last Name:</label>
-				<input type="text" id="txtLastNameEdit" name="txtLastNameEdit">
-				<label for "editEmail">Email:</label>
-				<input type="email" id="editEmail" name="editEmail">
-				<label for "txtPhoneEdit">Phone:</label>
-				<input type="text" id="txtPhoneEdit" name="txtPhoneEdit">
+				<label for="txtFirstNameEdit">First Name:</label>
+				<input type="text" id="txtFirstNameEdit" name="txtFirstName">
+				<label for ="txtLastNameEdit">Last Name:</label>
+				<input type="text" id="txtLastNameEdit" name="txtLastName">
+				<label for ="editEmail">Email:</label>
+				<input type="email" id="editEmail" name="addEmail">
+				<label for ="txtPhoneEdit">Phone:</label>
+				<input type="text" id="txtPhoneEdit" name="txtPhone">
 				<label for="relationshipTypeEdit">Relationship:</label>
 				<select id="relationshipTypeEdit" name="relationshipTypeEdit"></select>
 				<label for="notesEdit">Notes:</label>
-				<textarea id="notesEdit" name="notesEdit"></textarea>
+				<textarea id="notesEdit" name="notes"></textarea>
 				<a href="#" id="btnUpdate" data-role="button" 
 						data-inline="true" class="blue-btn">Update</a>
-				<a href="#" id="btnCancel" data-role="button" 
+				<a href="#" id="btnCancel1" data-role="button"
 						data-inline="true" class="blue-btn">Cancel</a>
 				<a href="#" id="btnDelete" data-role="button" 
 						data-inline="true" class="blue-btn">Delete</a>
@@ -152,26 +150,28 @@
       </div>
 		</footer>
 	</div>
-	<!------ Add Page ------>
-	<div data-role="page" id="pageAdd">
+
+
+<!------Page4:  Add Page ------>
+	<div data-role="page" id="pageAdd" name="pageAdd" class="backGround">
 		<header class="header-style" data-role="header" data-position="fixed">
-			<h1>Final Project PROG3180</h1>
+			<h1>Add New Contact</h1>
 		</header>
 		<section class="main" data-role="content">
 			<h1>Add page!</h1>
-			<p style="text-align:center"><img id="imgDisplay" src="#" 
+			<p style="text-align:center"><img id="imgDisplay" src="#"
 					alt="contacts image" style="display:none;"></p>
-			<form id="frmAdd">
-				<label for "imgFile">Image:</label>
-				<input type="file" id="imgFile" name="imgFile" 
+			<form id="frmAdd" name="frmAdd">
+				<label for ="imgFile">Image:</label>
+				<input type="file" id="imgFile" name="imgFile"
 								accept=".jpg,.jpeg" onchange="getImg(this, '#imgDisplay');">
-				<label for "txtFirstName">First Name:</label>
+				<label for= "txtFirstName">First Name:</label>
 				<input type="text" id="txtFirstName" name="txtFirstName">
-				<label for "txtLastName">Last Name:</label>
+				<label for="txtLastName">Last Name:</label>
 				<input type="text" id="txtLastName" name="txtLastName">
-				<label for "addEmail">Email:</label>
+				<label for ="addEmail">Email:</label>
 				<input type="email" id="addEmail" name="addEmail">
-				<label for "txtPhone">Phone:</label>
+				<label for ="txtPhone">Phone:</label>
 				<input type="text" id="txtPhone" name="txtPhone">
 				<label for="relationshipType">Relationship:</label>
 				<select id="relationshipType" name="relationshipType"></select>
@@ -200,51 +200,48 @@
       </div>
 		</footer>
 	</div>
-	<!------ Settings Page ------>
-	<div data-role="page" id="pageSettings">
+<!------Page5:  Settings Page ------>
+	<div data-role="page" id="pageSettings" class="backGround" name="page">
 		<header class="header-style" data-role="header" data-position="fixed">
-			<h1>Settings</h1>
+			<h1 data-icon="gear" data-iconpos="top" >Settings</h1>
 		</header>
 		<section class="main" data-role="content">
-			<h1>Settings page!</h1>		
-			<a id="btnDatabaseClear" href="###" data-role="button"
-						data-theme="b">Clear Database</a>
+		 <form id="frmSet1" >
+			 <h3 align="left">Change the Appearance:</h3>
 
-			<fieldset>
-				<h2 align="center">Choose A Theme</h2>
-				<input type="radio" id="radThemeDefault" name="themeChoice" 
-								value="default" placeholder="" checked="checked">
-				<label for="radThemeDefault">Default</label>
-				<input type="radio" id="radThemeRed" name="themeChoice" 
-								value="red" placeholder="">
+		 <!--radio buttons for the theme-->
+			 <label for ="themeGroup">Change the theme colour :</label>
+			 <fieldset data-role="controlgroup" id="themeGroup" data-type="horizontal">
+				<input type="radio" id="radThemeDefault" name="themeChoice"	value="default" placeholder="" checked="checked">
+				<label for="radThemeDefault">Blue</label>
+
+				<input type="radio" id="radThemeRed" name="themeChoice" value="red" placeholder="" color="red">
 				<label for="radThemeRed">Red</label>
-				<input type="radio" id="radThemeGreen" name="themeChoice" 
-								value="green" placeholder="">
+
+				<input type="radio" id="radThemeGreen" name="themeChoice"value="green" placeholder="">
 				<label for="radThemeGreen">Green</label>
-				<input type="radio" id="radThemePurple" name="themeChoice" 
-								value="purple" placeholder="">
+
+				<input type="radio" id="radThemePurple" name="themeChoice" value="purple" placeholder="">
 				<label for="radThemePurple">Purple</label>
-			</fieldset>
-			<a id="btnSetTheme" href="###" data-role="button"
-						data-theme="a">Set Theme</a>
-		</section>
-		<footer data-role="footer" data-theme="b" data-position="fixed">			
+			 </fieldset>
+			 <p><a href="#" onclick="showAdvance()">Show advanced settings..</a></p>
+
+			<div id="advance" style="display: none">
+				<a id="btnDatabaseClear" href="#" data-role="button" class="ui-btn ui-btn-corner-all ui-icon-alert ui-btn-icon-left" style="background-color:red;color:white">Delete all Contacts</a>
+			</div>
+		</form>
+     </section>
+	<footer data-role="footer" data-theme="b" data-position="fixed">
       <div data-role="navbar" data-iconpos="top">
         <ul>
-          <li><a href="#pageHome" data-icon="home" data-theme="a" class=""
-                 data-transition="" data-rel="">Home</a></li>
-          <li><a href="#pageContacts" data-icon="bars" data-theme="a" class="" 
-          			 data-transition="" data-rel="">Contacts</a></li>
-          <li><a href="#pageAdd" data-icon="plus" data-theme="a"
-                 class=""
-                 data-transition="" data-rel="">Add</a></li>
-          <li><a href="#pageSettings" data-icon="gear" data-theme="a"
-                 class="ui-btn-active ui-state-persist"
-                 data-transition="" data-rel="">Settings</a></li>
+          <li><a href="#pageHome" data-icon="home" data-theme="a" class="" data-transition="" data-rel="">Home</a></li>
+          <li><a href="#pageContacts" data-icon="bars" data-theme="a" class="" data-transition="" data-rel="">Contacts</a></li>
+          <li><a href="#pageAdd" data-icon="plus" data-theme="a"class=""  data-transition="" data-rel="">Add</a></li>
+          <li><a href="#pageSettings" data-icon="gear" data-theme="a"class="ui-btn-active ui-state-persist" data-transition="" data-rel="">Settings</a></li>
         </ul>
       </div>
-		</footer>
+	</footer>
 	</div>
-
-</body>
+  </body>
 </html>
+

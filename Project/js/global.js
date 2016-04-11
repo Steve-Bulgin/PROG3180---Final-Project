@@ -10,28 +10,20 @@
 
 //Function calls 'contactListMaker' 
 //on contact page show
-function pageContacts_show () { 
+
+function pageContacts_show () {
 	console.info("page show");
 	contactListMaker();
 }
 
-//Gets Sets theme selection adds to 
-//local storage
-function btnSetTheme_click () {
-	var theme = "";
-	theme = $("input[name=themeChoice]:checked").val();
-	localStorage.setItem("theme", theme);
-	alert(localStorage.getItem("theme") + " set");
-	themeSwitcher(theme);
-}
-
 function btnDatabaseClear_click () {
-	DB.dropTables(); 
+	clearDatabase();
 	initDB();
 }
 
 function pageAdd_show () {
 	dropDownSetter("#relationshipType");
+	clearfrmAdd();
 }
 
 function btnSave_click () {
@@ -52,27 +44,40 @@ function btnUpdate_click () {
 }
 
 function btnCancel_click () {
-	$(location).prop('href', "#pageContacts");  
+	$(location).prop('href', "#pageContacts");
 }
-
+function btnCancel1_click () {
+	$(location).prop('href', "#pageContacts");
+}
 function pageSettings_show () {
 	var theme = localStorage.getItem('theme');
 	console.info("theme set: " + theme);
 	$('input[name=themeChoice][value=' + theme + ']').prop('checked',true).checkboxradio("refresh");
+	$("#frmSet1 :radio").checkboxradio("refresh");
+	hideAdvance();
 }
 
 function init () {
 	themeSwitcher(localStorage.getItem("theme"));
-	$("#pageContacts").on("pageshow", pageContacts_show); 
-	$("#btnSetTheme").on("click", btnSetTheme_click);
-	$("#btnDatabaseClear").on("click", btnDatabaseClear_click);
+	$("#pageContacts").on("pageshow", pageContacts_show);
 	$("#pageAdd").on("pageshow", pageAdd_show);
 	$("#btnSave").on("click", btnSave_click);
 	$("#pageDetails").on("pageshow", pageDetails_show);
 	$("#btnDelete").on("click", btnDelete_click);
 	$("#btnUpdate").on("click", btnUpdate_click);
 	$("#btnCancel").on("click", btnCancel_click);
+	$("#btnCancel1").on("click",btnCancel1_click);
 	$("#pageSettings").on("pageshow", pageSettings_show);
+	$("#frmSet1 :radio").on("click", change_theme);
+
+	$("#btnDatabaseClear").on("click", btnDatabaseClear_click);
+}
+
+function change_theme(){
+	var theme = $("input[name=themeChoice]:checked").val();
+	localStorage.setItem("theme", theme);
+	themeSwitcher(theme);
+	$("#frmSet1 :radio").checkboxradio("refresh");
 }
 
 function initDB () {

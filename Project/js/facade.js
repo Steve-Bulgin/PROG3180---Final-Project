@@ -10,7 +10,6 @@
  *      Steven Bulgin, 2016.04.05: Add validation to Add (line 85)
  */
 
-
 //Constructs dynamic listviews. Adds to contactList div
 function contactListMaker () {
 	function successSelectAllOrderByLastName (tx, results) {
@@ -31,7 +30,6 @@ function contactListMaker () {
 		$("#listul").listview().listview("refresh");
 		$("#listul a").on("click", list_click);
 	}
-	
 
 	function list_click () {
 	    localStorage.setItem("id", $(this).attr("data-row-id"));
@@ -45,7 +43,6 @@ function contactListMaker () {
 function dropRelationType () {
 	RelationType.drop(); 
 }
-
 
 //Inserts types in relationType table
 // add or remove from relTypes array to alter select options
@@ -64,7 +61,6 @@ function insertRelationTypes () {
 function dropDownSetter (elm_id) {
 	function successSelectAll (tx, results) {
 	 	var code = "";
-
 	 	for (var i = 0; i < results.rows.length; i++) {
 	 	 	var row = results.rows[i];
 
@@ -81,19 +77,22 @@ function dropDownSetter (elm_id) {
 
 //Add contact to db
 function addContact () {
-	if (1==1) {
+	if (doValidate_Form("#frmAdd")){
+
 		var firstName = $("#txtFirstName").val();
 		var lastName = $("#txtLastName").val();
 		var eMail = $("#addEmail").val();
 		var phone = $("#txtPhone").val();
 		var relationshipId = $("#relationshipType").val();
 		var notes = $("#notes").val();
-	}
+
 
 	var options = [firstName, lastName, eMail, phone,
 	 			   relationshipId, notes];
 
-	Contacts.insert(options); 
+	Contacts.insert(options);
+	$(location).prop('href', "#pageContacts");
+	}
 }
 
 //Shows the detail of the contact clicked on from the listview
@@ -117,13 +116,16 @@ function showDetails () {
 function deleteContact () {
 	var id = localStorage.getItem("id");
 	var options = [id];
-
-	Contacts.delete(options);
-	$(location).prop('href', "#pageContacts");
+	var result = confirm("Are you sure you want to delete the contact? ");
+	if(result){
+		Contacts.delete(options);
+		$(location).prop('href', "#pageContacts");
+	}
 }
 
 function updateContact () {
-	if (1==1) {
+	if (doValidate_Form("#frmEdit")){
+
 		var id = localStorage.getItem("id");
 		var firstName = $("#txtFirstNameEdit").val();
 		var lastName = $("#txtLastNameEdit").val();
@@ -131,12 +133,23 @@ function updateContact () {
 		var phone = $("#txtPhoneEdit").val();
 		var relationshipId = $("#relationshipTypeEdit").val();
 		var notes = $("#notesEdit").val();
-	}
 
 	var options = [firstName, lastName, eMail, phone,
 	 			   relationshipId, notes, id];
 
 	Contacts.update(options);
-	$(location).prop('href', "#pageContacts"); 
+	$(location).prop('href', "#pageContacts");
+	}
 }
-
+// clear database
+function clearDatabase(){
+	var result = confirm("Do you really want to clear the database? All data will be lost");
+	try {
+		if (result) {
+			DB.dropTables();
+			alert("Database Cleared!");
+		}
+	} catch (e) {
+		alert(e);
+	}
+}
