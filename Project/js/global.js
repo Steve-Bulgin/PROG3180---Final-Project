@@ -35,6 +35,11 @@ function pageDetails_show () {
 	showDetails();
 }
 
+function pageDisplay_show () {
+	console.info("Page display");
+	displayData();
+}
+
 function btnDelete_click () {
 	deleteContact();
 }
@@ -63,6 +68,7 @@ function init () {
 	$("#pageAdd").on("pageshow", pageAdd_show);
 	$("#btnSave").on("click", btnSave_click);
 	$("#pageDetails").on("pageshow", pageDetails_show);
+	$("#pageDisplay").on("pageshow", pageDisplay_show);
 	$("#btnDelete").on("click", btnDelete_click);
 	$("#btnUpdate").on("click", btnUpdate_click);
 	$("#btnCancel").on("click", btnCancel_click);

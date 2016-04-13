@@ -33,7 +33,7 @@ function contactListMaker () {
 
 	function list_click () {
 	    localStorage.setItem("id", $(this).attr("data-row-id"));
-	    $(location).prop('href', "#pageDetails"); 
+	    $(location).prop('href', "#pageDisplay");
 	}
 	Contacts.selectAllOrderByLastName(successSelectAllOrderByLastName);     
 }
@@ -93,6 +93,40 @@ function addContact () {
 	Contacts.insert(options);
 	$(location).prop('href', "#pageContacts");
 	}
+}
+
+function displayData () {
+	console.info("dd");
+	var id = localStorage.getItem("id");
+	var options = [id];
+
+	function successSelectOne (tx, results) {
+		var row = results.rows[0];
+		$("#fname").html('<span>'+'jmghkjg'+'</span>');
+		$("#lname").html(row['lastName']);
+		$("#emaild").html("Email: " + row['eMail']);
+		$("#phoned").html("Calll: " + row['phone']);
+		if (row['relationshipId'] == 1) {
+			$("#relationship").html("Friend");
+		} else if (row['relationshipId'] == 2) {
+			$("#relationship").html("Classmate");
+		} else if (row['relationshipId'] == 3) {
+			$("#relationship").html("Instructor");
+		} else if (row['relationshipId'] == 4) {
+			$("#relationship").html("BFF");
+		} else if (row['relationshipId'] == 5) {
+			$("#relationship").html("Coworker");
+		} else if (row['relationshipId'] == 6) {
+			$("#relationship").html("Other");
+		} else if (row['relationshipId'] == 7) {
+			$("#relationship").html("Spouse");
+		} else if (row['relationshipId'] == 8) {
+			$("#relationship").html("Family");
+		}
+		$("#notesd").html(row['notes']);
+	}
+	Contacts.selectOne(options, successSelectOne);
+
 }
 
 //Shows the detail of the contact clicked on from the listview
