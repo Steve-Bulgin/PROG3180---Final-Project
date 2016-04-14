@@ -102,10 +102,38 @@ function displayData () {
 
 	function successSelectOne (tx, results) {
 		var row = results.rows[0];
-		$("#fname").html('<span>'+'jmghkjg'+'</span>');
+		$("#fname").html(row['firstName']);
 		$("#lname").html(row['lastName']);
-		$("#emaild").html("Email: " + row['eMail']);
-		$("#phoned").html("Calll: " + row['phone']);
+
+		//Email button maker
+		if (row['eMail'] != "") {
+			$("#emaild").html("<a  href=\"mailto:" + row['eMail'] + 
+				"\" data-role=\"button\" data-icon=\"plus\" "  + 
+				" data-iconpos=\"left\" class=\"ui-link ui-btn ui-icon-plus " +
+				" ui-btn-icon-left ui-shadow ui-corner-all\" " +
+				" role=\"button\">Email: " + row['eMail'] +"</a>");
+		}
+		else {
+			$("#emaild").empty();
+		}
+
+		//Phone button maker
+		if (row['phone'] != "") {
+
+			var phonenum = row['phone'];
+			phonenum = phonenum.replace(/\D/g, '');
+
+
+			$("#phoned").html("<a  href=\"tel:" + phonenum + 
+				"\" data-role=\"button\" data-icon=\"plus\" "  + 
+				" data-iconpos=\"left\" class=\"ui-link ui-btn ui-icon-plus " +
+				" ui-btn-icon-left ui-shadow ui-corner-all\" " +
+				" role=\"button\">Call: " + row['phone'] +"</a>");
+		}
+		else {
+			$("#phoned").empty();
+		}
+		
 		if (row['relationshipId'] == 1) {
 			$("#relationship").html("Friend");
 		} else if (row['relationshipId'] == 2) {
@@ -123,7 +151,14 @@ function displayData () {
 		} else if (row['relationshipId'] == 8) {
 			$("#relationship").html("Family");
 		}
-		$("#notesd").html(row['notes']);
+
+		if (row['notes'] != "") {
+			$("#notesd").html(row['notes']);
+		}
+		else {
+			$("#notesd").empty();
+		}
+		
 	}
 	Contacts.selectOne(options, successSelectOne);
 
