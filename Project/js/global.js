@@ -62,6 +62,10 @@ function pageSettings_show () {
 	hideAdvance();
 }
 
+function btnList_click () {
+	$(location).prop('href', "#pageContacts"); 
+}
+
 function init () {
 	themeSwitcher(localStorage.getItem("theme"));
 	$("#pageContacts").on("pageshow", pageContacts_show);
@@ -75,6 +79,7 @@ function init () {
 	$("#btnCancel1").on("click",btnCancel1_click);
 	$("#pageSettings").on("pageshow", pageSettings_show);
 	$("#frmSet1 :radio").on("click", change_theme);
+	$("#btnList").on("click", btnList_click);
 
 	$("#btnDatabaseClear").on("click", btnDatabaseClear_click);
 }

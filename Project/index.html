@@ -111,13 +111,16 @@
 		</header>
 		<section class="main" data-role="content">
 			<h1>Display page!</h1>
-			<h2 id="fname"></h2>
-			<h2 id="lname"></h2>
+			<span id="fname"></span>
+			<span id="lname"></span>
 			<span id="phoned"></span>
 			<span id="emaild"></span>
-			<h2 id="relationship"></h2>
-			<h2>Notes</h2>
-			<p id="notesd"></p>
+			<span id="relationship"></span>
+			<span id="notesd"></span>
+			<a href="#" id="btnList" data-role="button" 
+						data-inline="true" class="blue-btn">Back to Contacts List</a>
+			<a href="#pageDetails" id="btnEdit" data-role="button"
+					data-inline="true" class="blue-btn">Edit Contact</a>
 		</section>
 		<footer data-role="footer" data-theme="b" data-position="fixed">			
       <div data-role="navbar" data-iconpos="top">
@@ -194,12 +197,7 @@
 		</header>
 		<section class="main" data-role="content">
 			<h1>Add page!</h1>
-			<p style="text-align:center"><img id="imgDisplay" src="#"
-					alt="contacts image" style="display:none;"></p>
 			<form id="frmAdd" name="frmAdd">
-				<label for ="imgFile">Image:</label>
-				<input type="file" id="imgFile" name="imgFile"
-								accept=".jpg,.jpeg" onchange="getImg(this, '#imgDisplay');">
 				<label for= "txtFirstName">First Name:</label>
 				<input type="text" id="txtFirstName" name="txtFirstName">
 				<label for="txtLastName">Last Name:</label>

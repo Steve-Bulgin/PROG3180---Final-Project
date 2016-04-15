@@ -102,8 +102,8 @@ function displayData () {
 
 	function successSelectOne (tx, results) {
 		var row = results.rows[0];
-		$("#fname").html(row['firstName']);
-		$("#lname").html(row['lastName']);
+		$("#fname").html("<h4>First Name: " + row['firstName'] + "</h4>");
+		$("#lname").html("<h4>Last Name: " + row['lastName'] + "</h4>");
 
 		//Email button maker
 		if (row['eMail'] != "") {
@@ -128,32 +128,38 @@ function displayData () {
 				"\" data-role=\"button\" data-icon=\"plus\" "  + 
 				" data-iconpos=\"left\" class=\"ui-link ui-btn ui-icon-plus " +
 				" ui-btn-icon-left ui-shadow ui-corner-all\" " +
-				" role=\"button\">Call: " + row['phone'] +"</a>");
+				" role=\"button\">Call: " + row['phone'] +"</a>" + 
+				"<a  href=\"sms:" + phonenum + 
+				"\" data-role=\"button\" data-icon=\"plus\" "  + 
+				" data-iconpos=\"left\" class=\"ui-link ui-btn ui-icon-plus " +
+				" ui-btn-icon-left ui-shadow ui-corner-all\" " +
+				" role=\"button\">SMS: " + row['phone'] +"</a>");
 		}
 		else {
 			$("#phoned").empty();
 		}
 		
 		if (row['relationshipId'] == 1) {
-			$("#relationship").html("Friend");
+			$("#relationship").html("<h4>Relationship: Friend</h4>");
 		} else if (row['relationshipId'] == 2) {
-			$("#relationship").html("Classmate");
+			$("#relationship").html("<h4>Relationship: Classmate</h4>");
 		} else if (row['relationshipId'] == 3) {
-			$("#relationship").html("Instructor");
+			$("#relationship").html("<h4>Relationship: Instructor</h4>");
 		} else if (row['relationshipId'] == 4) {
-			$("#relationship").html("BFF");
+			$("#relationship").html("<h4>Relationship: BFF</h4>");
 		} else if (row['relationshipId'] == 5) {
-			$("#relationship").html("Coworker");
+			$("#relationship").html("<h4>Relationship: Coworker</h4>");
 		} else if (row['relationshipId'] == 6) {
-			$("#relationship").html("Other");
+			$("#relationship").html("<h4>Relationship: Other</h4>");
 		} else if (row['relationshipId'] == 7) {
-			$("#relationship").html("Spouse");
+			$("#relationship").html("<h4>Relationship: Spouse</h4>");
 		} else if (row['relationshipId'] == 8) {
-			$("#relationship").html("Family");
+			$("#relationship").html("<h4>Relationship: Family</h4>");
 		}
 
 		if (row['notes'] != "") {
-			$("#notesd").html(row['notes']);
+			$("#notesd").html("<h4>Notes:</h4>" + 
+				"<p>" + row['notes'] + "</p>");
 		}
 		else {
 			$("#notesd").empty();
