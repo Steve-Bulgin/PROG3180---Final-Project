@@ -33,7 +33,7 @@ function contactListMaker () {
 
 	function list_click () {
 	    localStorage.setItem("id", $(this).attr("data-row-id"));
-	    $(location).prop('href', "#pageDetails"); 
+	    $(location).prop('href', "#pageDisplay");
 	}
 	Contacts.selectAllOrderByLastName(successSelectAllOrderByLastName);     
 }
@@ -93,6 +93,81 @@ function addContact () {
 	Contacts.insert(options);
 	$(location).prop('href', "#pageContacts");
 	}
+}
+
+function displayData () {
+	console.info("dd");
+	var id = localStorage.getItem("id");
+	var options = [id];
+
+	function successSelectOne (tx, results) {
+		var row = results.rows[0];
+		$("#fname").html("<h4>First Name: " + row['firstName'] + "</h4>");
+		$("#lname").html("<h4>Last Name: " + row['lastName'] + "</h4>");
+
+		//Email button maker
+		if (row['eMail'] != "") {
+			$("#emaild").html("<a  href=\"mailto:" + row['eMail'] + 
+				"\" data-role=\"button\" data-icon=\"plus\" "  + 
+				" data-iconpos=\"left\" class=\"ui-link ui-btn ui-icon-plus " +
+				" ui-btn-icon-left ui-shadow ui-corner-all\" " +
+				" role=\"button\">Email: " + row['eMail'] +"</a>");
+		}
+		else {
+			$("#emaild").empty();
+		}
+
+		//Phone button maker
+		if (row['phone'] != "") {
+
+			var phonenum = row['phone'];
+			phonenum = phonenum.replace(/\D/g, '');
+
+
+			$("#phoned").html("<a  href=\"tel:" + phonenum + 
+				"\" data-role=\"button\" data-icon=\"plus\" "  + 
+				" data-iconpos=\"left\" class=\"ui-link ui-btn ui-icon-plus " +
+				" ui-btn-icon-left ui-shadow ui-corner-all\" " +
+				" role=\"button\">Call: " + row['phone'] +"</a>" + 
+				"<a  href=\"sms:" + phonenum + 
+				"\" data-role=\"button\" data-icon=\"plus\" "  + 
+				" data-iconpos=\"left\" class=\"ui-link ui-btn ui-icon-plus " +
+				" ui-btn-icon-left ui-shadow ui-corner-all\" " +
+				" role=\"button\">SMS: " + row['phone'] +"</a>");
+		}
+		else {
+			$("#phoned").empty();
+		}
+		
+		if (row['relationshipId'] == 1) {
+			$("#relationship").html("<h4>Relationship: Friend</h4>");
+		} else if (row['relationshipId'] == 2) {
+			$("#relationship").html("<h4>Relationship: Classmate</h4>");
+		} else if (row['relationshipId'] == 3) {
+			$("#relationship").html("<h4>Relationship: Instructor</h4>");
+		} else if (row['relationshipId'] == 4) {
+			$("#relationship").html("<h4>Relationship: BFF</h4>");
+		} else if (row['relationshipId'] == 5) {
+			$("#relationship").html("<h4>Relationship: Coworker</h4>");
+		} else if (row['relationshipId'] == 6) {
+			$("#relationship").html("<h4>Relationship: Other</h4>");
+		} else if (row['relationshipId'] == 7) {
+			$("#relationship").html("<h4>Relationship: Spouse</h4>");
+		} else if (row['relationshipId'] == 8) {
+			$("#relationship").html("<h4>Relationship: Family</h4>");
+		}
+
+		if (row['notes'] != "") {
+			$("#notesd").html("<h4>Notes:</h4>" + 
+				"<p>" + row['notes'] + "</p>");
+		}
+		else {
+			$("#notesd").empty();
+		}
+		
+	}
+	Contacts.selectOne(options, successSelectOne);
+
 }
 
 //Shows the detail of the contact clicked on from the listview

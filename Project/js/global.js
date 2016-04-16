@@ -35,6 +35,11 @@ function pageDetails_show () {
 	showDetails();
 }
 
+function pageDisplay_show () {
+	console.info("Page display");
+	displayData();
+}
+
 function btnDelete_click () {
 	deleteContact();
 }
@@ -57,18 +62,24 @@ function pageSettings_show () {
 	hideAdvance();
 }
 
+function btnList_click () {
+	$(location).prop('href', "#pageContacts"); 
+}
+
 function init () {
 	themeSwitcher(localStorage.getItem("theme"));
 	$("#pageContacts").on("pageshow", pageContacts_show);
 	$("#pageAdd").on("pageshow", pageAdd_show);
 	$("#btnSave").on("click", btnSave_click);
 	$("#pageDetails").on("pageshow", pageDetails_show);
+	$("#pageDisplay").on("pageshow", pageDisplay_show);
 	$("#btnDelete").on("click", btnDelete_click);
 	$("#btnUpdate").on("click", btnUpdate_click);
 	$("#btnCancel").on("click", btnCancel_click);
 	$("#btnCancel1").on("click",btnCancel1_click);
 	$("#pageSettings").on("pageshow", pageSettings_show);
 	$("#frmSet1 :radio").on("click", change_theme);
+	$("#btnList").on("click", btnList_click);
 
 	$("#btnDatabaseClear").on("click", btnDatabaseClear_click);
 }
