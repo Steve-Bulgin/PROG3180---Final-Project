@@ -1,4 +1,8 @@
 # PROG3180---Final-Project
+
+# Description
+A simple Cordova/Phonegap app made as a final project for PROG3180 - Mobile Apps 1 made by Steven Bulgin and Nadia Siraj. The app holds contact information entered by a user. 
+
 ## Non Critical Problems 
 - Styling on search bar could use som work
 
